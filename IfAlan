@@ -1,0 +1,29 @@
+void main() {
+  print("Lutfen seciminizi Yapiniz");
+  print("Dikdortgen Alani (1)");
+  print("cember alani (2)");
+  int secim = int.parse(stdin.readLineSync()!);
+  print("seciminiz : $secim");
+
+  if (secim == 1 && secim == 2) {
+    if (secim == 1) {
+      print("Kisa kenari giriniz");
+      int kisaKenar = int.parse(stdin.readLineSync()!);
+      print("uzun kenari giriniz");
+      int uzunKenar = int.parse(stdin.readLineSync()!);
+      print("Kisa kenar ve uzun kenari girmis bulunmaktasiniz");
+      var result = kisaKenar * uzunKenar;
+      print("Sonuc : $result");
+    } else if (secim == 2) {
+      print("Yari Capi  Giriniz");
+      int yaricap = int.parse(stdin.readLineSync()!);
+      final double pi = 3.14;
+      var result = pi * yaricap;
+      print("Girdiginiz deger $yaricap");
+      print("$yaricap li alan Sonuc : $result");
+    }
+  } else {
+    print("Yanlis Bir Deger Girdiniz Lutfen,Tekrar Sayi Giriniz");
+    main();
+  }
+}
